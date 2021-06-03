@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="me.carda.awesome_notifications_fcm_example">
+
    <application
-        android:label="awesome_notifications_fcm_example"
+        android:label="Awesome Notifications FCM"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

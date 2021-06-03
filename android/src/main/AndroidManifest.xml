@@ -1,11 +1,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="me.carda.awesome_notifications_fcm">
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
     <application>
+        <receiver android:name=".services.BootBroadcastReceiver">
+            <intent-filter >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
 
         <service
             android:name=".services.FCMService"
-            android:exported="false">
+            android:exported="false"
+            android:directBootAware="true">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>

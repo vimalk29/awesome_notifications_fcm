@@ -1,9 +1,11 @@
 package me.carda.awesome_notifications_fcm;
 
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.os.Build;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,8 +32,10 @@ import me.carda.awesome_notifications.utils.MapUtils;
 import me.carda.awesome_notifications_fcm.exceptions.AwesomeNotificationFcmException;
 import me.carda.awesome_notifications_fcm.managers.FcmDefaultsManager;
 import me.carda.awesome_notifications_fcm.models.FcmDefaultsModel;
+import me.carda.awesome_notifications_fcm.services.BootBroadcastReceiver;
 import me.carda.awesome_notifications_fcm.services.DartBackgroundExecutor;
 import me.carda.awesome_notifications_fcm.services.DartBackgroundService;
+import me.carda.awesome_notifications_fcm.services.FCMService;
 
 /**
  * AwesomeNotificationsFcmPlugin
@@ -114,11 +118,14 @@ public class AwesomeNotificationsFcmPlugin extends BroadcastReceiver
         FirebaseApp firebaseApp = FirebaseApp.initializeApp(context);
         firebaseEnabled = firebaseApp != null;
 
-        if (AwesomeNotificationsFcmPlugin.debug)
-            Log.d(TAG, "Firebase "+(firebaseEnabled ? "enabled" : "not enabled"));
+        ComponentName componentName = new ComponentName(applicationContext, FCMService.class);
+        applicationContext.getPackageManager().setComponentEnabledSetting(
+                componentName,
+                PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                PackageManager.DONT_KILL_APP);
 
-        if (!firebaseEnabled)
-            throw new AwesomeNotificationFcmException("Firebase not enabled.");
+        if (AwesomeNotificationsFcmPlugin.debug)
+            Log.d(TAG, "Firebase Cloud Messaging "+(firebaseEnabled ? "enabled" : "not enabled"));
     }
 
     @Override
