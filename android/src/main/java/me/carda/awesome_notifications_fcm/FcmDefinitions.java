@@ -4,6 +4,8 @@ public interface FcmDefinitions {
 
     String DART_REVERSE_CHANNEL = "awesomeNotificationsFCMReverse";
 
+    String CHANNEL_FLUTTER_PLUGIN = "awesome_notifications_fcm";
+
     String BROADCAST_FCM_TOKEN = "me.carda.awesome_notifications_fcm.services.firebase.TOKEN";
     String BROADCAST_SILENT_DATA = "me.carda.awesome_notifications_fcm.services.silentData";
 

@@ -58,7 +58,7 @@ public class AwesomeNotificationsFcmPlugin extends BroadcastReceiver
             flutterPluginBinding.getApplicationContext(),
             new MethodChannel(
                 flutterPluginBinding.getBinaryMessenger(),
-                "awesome_notifications_fcm"
+                FcmDefinitions.CHANNEL_FLUTTER_PLUGIN
             )
         );
     }

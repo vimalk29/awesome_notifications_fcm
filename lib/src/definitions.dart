@@ -1,4 +1,6 @@
 
+const String CHANNEL_FLUTTER_PLUGIN = 'awesome_notifications_fcm';
+
 const DART_REVERSE_CHANNEL = 'awesomeNotificationsFCMReverse';
 
 const SILENT_DATA_BACKGROUND_HANDLE = 'onSilentDataHandle';

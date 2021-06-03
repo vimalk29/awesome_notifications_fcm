@@ -12,7 +12,8 @@ dependencies:
   flutter:
     sdk: flutter
 
-  awesome_notifications:
+  firebase_core:
+  awesome_notifications: #^0.0.6+7
     path: ../awesome_notifications
 
 dev_dependencies:

@@ -14,8 +14,6 @@ typedef Future<void> SilentDataHandler(SilentData silentData);
 
 class AwesomeNotificationsFcm {
 
-  static const String CHANNEL_FLUTTER_PLUGIN = 'awesome_notifications_fcm';
-
   /// STREAM CREATION METHODS *********************************************
 
   /// Streams are created so that app can respond to notification-related events since the plugin is initialised in the `main` function

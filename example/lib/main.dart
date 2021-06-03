@@ -23,7 +23,7 @@ Future<void> mySilentDataHandle(SilentData silentData) async {
 
 Future<void> initializeAllNotificationsPlugins() async {
   await AwesomeNotifications().initialize(
-      null,
+      'resource://drawable/res_app_icon',
       [
         NotificationChannel(
             channelKey: 'alerts',
