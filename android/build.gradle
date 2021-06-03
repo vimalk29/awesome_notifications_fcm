@@ -1,0 +1,40 @@
+group 'me.carda.awesome_notifications_fcm'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.2.1"
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        minSdkVersion 16
+    }
+}
+
+dependencies {
+    compileOnly project(':awesome_notifications')
+    implementation project(':firebase_core')
+
+    implementation "com.google.code.gson:gson:2.8.6"
+    implementation ("com.google.guava:guava:30.1-android") { setForce(true) }
+
+    implementation 'com.google.firebase:firebase-messaging'
+}

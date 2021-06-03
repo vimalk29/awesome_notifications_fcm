@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "829601661680",
+    "firebase_url": "https://teste-firebase-67c93.firebaseio.com",
+    "project_id": "teste-firebase-67c93",
+    "storage_bucket": "teste-firebase-67c93.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829601661680:android:539d0999fa50b9aa167835",
+        "android_client_info": {
+          "package_name": "me.carda.awesome_notifications_example"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829601661680-ia63q1pm6gfqaknlstnfpv4s1darm5kl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDi4ewjngTwamsbtI0wOfoxsPDsBuz8-jU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829601661680-ia63q1pm6gfqaknlstnfpv4s1darm5kl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "829601661680-4h3fr9f06fap5a864ksdmgsdnhvkf03u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "me.carda.awesomeNotificationsExample"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829601661680:android:dd0e206c59892c44167835",
+        "android_client_info": {
+          "package_name": "me.carda.awesome_notifications_fcm_example"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829601661680-ia63q1pm6gfqaknlstnfpv4s1darm5kl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDi4ewjngTwamsbtI0wOfoxsPDsBuz8-jU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829601661680-ia63q1pm6gfqaknlstnfpv4s1darm5kl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "829601661680-4h3fr9f06fap5a864ksdmgsdnhvkf03u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "me.carda.awesomeNotificationsExample"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
